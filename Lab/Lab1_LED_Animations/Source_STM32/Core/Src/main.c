@@ -36,7 +36,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-#define EXERCISE 1
+#define EXERCISE 5
 #if EXERCISE == 1
 	#define LED_RED_Pin GPIO_PIN_5
 	#define LED_RED_GPIO_Port GPIOA
