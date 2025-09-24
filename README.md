@@ -1,4 +1,4 @@
-# Vi Điều Khiển - Vi Xử Lí (HK251)
+# Vi Điều Khiển - Vi Xử Lí (CO3009 - TN01 - HK251)
 
 Đây là kho lưu trữ chứa toàn bộ mã nguồn và tài liệu cho các bài thí nghiệm trong khuôn khổ học phần Vi xử lý - Vi điều khiển. Project tập trung vào việc lập trình cho vi điều khiển STM32, sử dụng thư viện HAL và mô phỏng trên Proteus.
 
