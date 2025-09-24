@@ -1,4 +1,4 @@
-# Project Thí nghiệm Vi xử lý - Vi điều khiển (HK251)
+# Vi Điều Khiển - Vi Xử Lí (HK251)
 
 Đây là kho lưu trữ chứa toàn bộ mã nguồn và tài liệu cho các bài thí nghiệm trong khuôn khổ học phần Vi xử lý - Vi điều khiển. Project tập trung vào việc lập trình cho vi điều khiển STM32, sử dụng thư viện HAL và mô phỏng trên Proteus.
 
@@ -6,8 +6,8 @@
 
 ## 🚀 Công nghệ sử dụng
 
-*   **Ngôn ngữ lập trình:** C
-*   **Vi điều khiển:** STM32F103C6
+*   **Ngôn ngữ lập trình:** C/C++
+*   **Vi điều khiển:** STM32F103C6/...
 *   **Thư viện:** STM32 HAL (Hardware Abstraction Layer)
 *   **IDE:** STM32CubeIDE
 *   **Mô phỏng:** Proteus 8 Professional
@@ -39,7 +39,7 @@ Microcontroller-251/
 ### Lab 1: LED Animations
 
 *   **Mục tiêu:** Làm quen với việc cấu hình chân GPIO (General Purpose Input/Output) ở chế độ Output và tạo các hiệu ứng LED đơn giản.
-*   **Nội dung:** Viết chương trình cho 6 bài tập nhỏ, mỗi bài là một hiệu ứng chớp tắt LED khác nhau, giúp nắm vững cách điều khiển nhiều LED và sử dụng hàm `HAL_Delay()`.
+*   **Nội dung:** Viết chương trình cho 10 bài tập nhỏ, mỗi bài là một hiệu ứng chớp tắt LED khác nhau, giúp nắm vững cách điều khiển nhiều LED và sử dụng hàm `HAL_Delay()`.
 
 ### Lab 2: Timer & Advanced Displays
 
@@ -59,11 +59,12 @@ Microcontroller-251/
 
 1.  Mở **STM32CubeIDE**.
 2.  Chọn `File > Open Projects from File System...` và trỏ đến thư mục `Source_STM32` của bài Lab tương ứng.
-3.  Nhấn `Project > Build All` (hoặc `Ctrl+B`) để biên dịch project. File `.hex` sẽ được tạo trong thư mục `Debug`.
+3.  Hãy thay đổi macro `#define EXERCISE 1` để build bài tập cần chạy. 
+4.  Nhấn `Project > Build All` (hoặc `Ctrl+B`) để biên dịch project. File `.hex` sẽ được tạo trong thư mục `Debug`.
 
 ### 2. Chạy mô phỏng Proteus
 
-1.  Mở file `.pdsprj` trong thư mục `Source_Proteus` (hoặc `SoureProtus`).
+1.  Mở file `.pdsprj` của bài muốn chạy trong thư mục `Source_Proteus` (hoặc `SoureProtus`).
 2.  Nháy đúp vào vi điều khiển STM32 trong sơ đồ mạch.
 3.  Trong cửa sổ **Edit Component**, nhấn vào biểu tượng thư mục ở dòng **Program File**.
 4.  Trỏ đến file `.hex` vừa được tạo ở bước trên (trong thư mục `Debug` của project STM32).
@@ -73,8 +74,9 @@ Microcontroller-251/
 
 ## 👨‍💻 Tác giả
 
-*   **Họ và tên:** ChiThanh512
-*   **GitHub:** [https://github.com/ChiThanh512](https://github.com/ChiThanh512)
+*   **Họ và tên:** Nguyễn Chí Thanh
+*   **Giáo viên hướng dẫn:** TS. Lê Trọng Nhân
+*   **GitHub:** [[Tại đây](https://github.com/batmaon512/Microcontroller-251)].
 
 ---
 
