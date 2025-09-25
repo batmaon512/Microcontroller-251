@@ -36,7 +36,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-#define EXERCISE 5
+#define EXERCISE 10
 #if EXERCISE == 1
 	#define LED_RED_Pin GPIO_PIN_5
 	#define LED_RED_GPIO_Port GPIOA
@@ -94,7 +94,7 @@
 
 //DEFINE FUNCTION
  void display7SEG(int counter){
-	 if(counter >= 10 || counter < 0) return;
+	 if(counter > 9 || counter < 0) return;
 	 HAL_GPIO_WritePin(PIN_A_GPIO_Port, PIN_A_Pin, counter==1 || counter==4);
 	 HAL_GPIO_WritePin(PIN_B_GPIO_Port, PIN_B_Pin, counter==5 || counter==6);
 	 HAL_GPIO_WritePin(PIN_C_GPIO_Port, PIN_C_Pin, counter==2);
@@ -110,14 +110,14 @@
  //NOTE: SUM OF TIME 3 LED OF TRAFFIC LIGHT MUST BE EQUAL SUM_TIME_LED
  //Real Time = Time x 10 ms and < 10 s
  //YELLOW_TIME + GREEN_TIME == RED_TIME_LED OTHER
-#define SUM_TIME_LED 1700
+#define SUM_TIME_LED 1000
 
-#define TIME_LED_RED_1 900
-#define TIME_LED_GREEN_1 600
+#define TIME_LED_RED_1 500
+#define TIME_LED_GREEN_1 300
 #define TIME_LED_YELLOW_1 200
 
-#define TIME_LED_RED_2 800
-#define TIME_LED_GREEN_2 700
+#define TIME_LED_RED_2 500
+#define TIME_LED_GREEN_2 300
 #define TIME_LED_YELLOW_2 200
 
 #define LED_RED_1_Pin GPIO_PIN_0
@@ -162,7 +162,7 @@
 #define PIN_G_2_GPIO_Port GPIOB
 
  void display7SEG(int counter, int i){
-	 if(counter >= 10 || counter < 0) return;
+	 if(counter > 9 || counter < 0) return;
 	 if(i == 1){
 	 HAL_GPIO_WritePin(PIN_A_1_GPIO_Port, PIN_A_1_Pin, counter==1 || counter==4);
 	 HAL_GPIO_WritePin(PIN_B_1_GPIO_Port, PIN_B_1_Pin, counter==5 || counter==6);
@@ -208,83 +208,117 @@
 #define PIN_12_Pin GPIO_PIN_11
 #define PIN_12_GPIO_Port GPIOA
 
-//DENFINE FUNCTION
 
+#elif EXERCISE == 7
+
+#elif EXERCISE == 8
+
+#elif EXERCISE == 9
+
+#elif EXERCISE == 10
+#define PIN_1_Pin GPIO_PIN_0
+#define PIN_1_GPIO_Port GPIOA
+#define PIN_2_Pin GPIO_PIN_1
+#define PIN_2_GPIO_Port GPIOA
+#define PIN_3_Pin GPIO_PIN_2
+#define PIN_3_GPIO_Port GPIOA
+#define PIN_4_Pin GPIO_PIN_3
+#define PIN_4_GPIO_Port GPIOA
+#define PIN_5_Pin GPIO_PIN_4
+#define PIN_5_GPIO_Port GPIOA
+#define PIN_6_Pin GPIO_PIN_5
+#define PIN_6_GPIO_Port GPIOA
+#define PIN_7_Pin GPIO_PIN_6
+#define PIN_7_GPIO_Port GPIOA
+#define PIN_8_Pin GPIO_PIN_7
+#define PIN_8_GPIO_Port GPIOA
+#define PIN_9_Pin GPIO_PIN_8
+#define PIN_9_GPIO_Port GPIOA
+#define PIN_10_Pin GPIO_PIN_9
+#define PIN_10_GPIO_Port GPIOA
+#define PIN_11_Pin GPIO_PIN_10
+#define PIN_11_GPIO_Port GPIOA
+#define PIN_12_Pin GPIO_PIN_11
+#define PIN_12_GPIO_Port GPIOA
+
+//DENFINE FUNCTION
+#define USING_FUNCTION_DISPLAY_CLOCK 1
+#if USING_FUNCTION_DISPLAY_CLOCK == 1
 void  setNumberOnClock(int num){
 if(num > 11 || num < 0) return;
-if(num == 0){
+if(num == 1){
 	HAL_GPIO_WritePin(PIN_1_GPIO_Port, PIN_1_Pin, 0);
 }
-else if(num == 1){
+else if(num == 2){
 	HAL_GPIO_WritePin(PIN_2_GPIO_Port, PIN_2_Pin, 0);
 }
-else if(num == 2){
+else if(num == 3){
 	HAL_GPIO_WritePin(PIN_3_GPIO_Port, PIN_3_Pin, 0);
 }
-else if(num == 3){
+else if(num == 4){
 	HAL_GPIO_WritePin(PIN_4_GPIO_Port, PIN_4_Pin, 0);
 }
-else if(num == 4){
+else if(num == 5){
 	HAL_GPIO_WritePin(PIN_5_GPIO_Port, PIN_5_Pin, 0);
 }
-else if(num == 5){
+else if(num == 6){
 	HAL_GPIO_WritePin(PIN_6_GPIO_Port, PIN_6_Pin, 0);
 }
-else if(num == 6){
+else if(num == 7){
 	HAL_GPIO_WritePin(PIN_7_GPIO_Port, PIN_7_Pin, 0);
 }
-else if(num == 7){
+else if(num == 8){
 	HAL_GPIO_WritePin(PIN_8_GPIO_Port, PIN_8_Pin, 0);
 }
-else if(num == 8){
+else if(num == 9){
 	HAL_GPIO_WritePin(PIN_9_GPIO_Port, PIN_9_Pin, 0);
 }
-else if(num == 9){
+else if(num == 10){
 	HAL_GPIO_WritePin(PIN_10_GPIO_Port, PIN_10_Pin, 0);
 }
-else if(num == 10){
+else if(num == 11){
 	HAL_GPIO_WritePin(PIN_11_GPIO_Port, PIN_11_Pin, 0);
 }
-else if(num == 11){
+else if(num == 0){
 	HAL_GPIO_WritePin(PIN_12_GPIO_Port, PIN_12_Pin, 0);
 }
 }
 void clearNumberOnClock(int num){
 	if(num > 11 || num < 0) return;
-	if(num == 0){
+	if(num == 1){
 		HAL_GPIO_WritePin(PIN_1_GPIO_Port, PIN_1_Pin, 1);
 	}
-	else if(num == 1){
+	else if(num == 2){
 		HAL_GPIO_WritePin(PIN_2_GPIO_Port, PIN_2_Pin, 1);
 	}
-	else if(num == 2){
+	else if(num == 3){
 		HAL_GPIO_WritePin(PIN_3_GPIO_Port, PIN_3_Pin, 1);
 	}
-	else if(num == 3){
+	else if(num == 4){
 		HAL_GPIO_WritePin(PIN_4_GPIO_Port, PIN_4_Pin, 1);
 	}
-	else if(num == 4){
+	else if(num == 5){
 		HAL_GPIO_WritePin(PIN_5_GPIO_Port, PIN_5_Pin, 1);
 	}
-	else if(num == 5){
+	else if(num == 6){
 		HAL_GPIO_WritePin(PIN_6_GPIO_Port, PIN_6_Pin, 1);
 	}
-	else if(num == 6){
+	else if(num == 7){
 		HAL_GPIO_WritePin(PIN_7_GPIO_Port, PIN_7_Pin, 1);
 	}
-	else if(num == 7){
+	else if(num == 8){
 		HAL_GPIO_WritePin(PIN_8_GPIO_Port, PIN_8_Pin, 1);
 	}
-	else if(num == 8){
+	else if(num == 9){
 		HAL_GPIO_WritePin(PIN_9_GPIO_Port, PIN_9_Pin, 1);
 	}
-	else if(num == 9){
+	else if(num == 10){
 		HAL_GPIO_WritePin(PIN_10_GPIO_Port, PIN_10_Pin, 1);
 	}
-	else if(num == 10){
+	else if(num == 11){
 		HAL_GPIO_WritePin(PIN_11_GPIO_Port, PIN_11_Pin, 1);
 	}
-	else if(num == 11){
+	else if(num == 0){
 		HAL_GPIO_WritePin(PIN_12_GPIO_Port, PIN_12_Pin, 1);
 	}
 }
@@ -302,14 +336,8 @@ void  clearAllClock(){
 	HAL_GPIO_WritePin(PIN_11_GPIO_Port, PIN_11_Pin, 1);
 	HAL_GPIO_WritePin(PIN_12_GPIO_Port, PIN_12_Pin, 1);
 }
-#elif EXERCISE == 7
-
-#elif EXERCISE == 8
-
-#elif EXERCISE == 9
-
-#elif EXERCISE == 10
-//IF ALL PORT OF PIN 1-12 SAME AND NOT USE EXCEPT TASK
+#elif USING_FUNCTION_DISPLAY_CLOCK == 2
+//JUST USING ONLY THIS TASK OR IF ALL PORT OF PIN 1-12 ARE SAME THIS TASK.
 void  setNumberOnClock(int num){
 if(num > 11 || num < 0) return;
 HAL_GPIO_WritePin(PIN_1_GPIO_Port, 1<<num, 0);
@@ -322,6 +350,11 @@ void  clearAllClock(){
 	 uint16_t temp = 15;
 HAL_GPIO_WritePin(PIN_1_GPIO_Port, ~(temp<<12) , 1);
 }
+#endif
+#define second_init  1; //(1 - 60)
+#define minute_init  49; //(1 - 60)
+#define hour_init  3; //(1-12)
+
 #endif
 /* USER CODE END PM */
 
@@ -384,16 +417,13 @@ int main(void)
 #elif EXERCISE == 4
   int32_t counter = 100;
   uint8_t state = 0;
-  uint32_t counter_7LED = 100;
 #elif EXERCISE == 5
   int32_t counter = SUM_TIME_LED;
   int8_t state = -1;
   int32_t counter_7LED = 0;
 #elif EXERCISE == 6
-  int8_t hour = 1;
-  int8_t minute = 1;
-  int8_t second = 1;
-  int32_t counter = 50;
+int num = 0;
+int counter = 100;
 #elif EXERCISE == 7
 
 #elif EXERCISE == 8
@@ -401,7 +431,10 @@ int main(void)
 #elif EXERCISE == 9
 
 #elif EXERCISE == 10
-
+  int8_t hour = hour_init;
+  int8_t minute = minute_init;
+  int8_t second = second_init;
+  int32_t counter = 50;
 #endif
   /* USER CODE END 2 */
 
@@ -497,6 +530,7 @@ int main(void)
 	  	counter--;
 	  	HAL_Delay(10);
 #elif EXERCISE == 5
+//CONTROL LED TRAFFIC
 		  if(counter == SUM_TIME_LED && state != 0){
 			  		  HAL_GPIO_WritePin(LED_RED_1_GPIO_Port, LED_RED_1_Pin, 0);
 			  		  HAL_GPIO_WritePin(LED_GREEN_1_GPIO_Port, LED_GREEN_1_Pin, 1);
@@ -559,27 +593,49 @@ int main(void)
 		  	  counter--;
 		  	  HAL_Delay(10);
 #elif EXERCISE == 6
-		  	  if(counter <= 0){
-		  		  second++;
-		  		  clearAllClock();
-			  	  if(second > 12){
-			  		  minute++;
-				  	  if(minute > 12){
-				  		  hour++;
-					  	  if(hour > 12){
-					  		  hour = 1;
-					  	  }
-				  		  minute = 1;
-				  	  }
-			  		  second = 1;
-			  	  }
-			  	  setNumberOnClock(second-1);
-			  	  setNumberOnClock(minute-1);
-			  	  setNumberOnClock(hour-1);
-		  		  counter = 50;
-		  	  }
-counter--;
-HAL_Delay(10);
+		  	if(counter <= 0){
+			  	if(num == 1){
+			  		HAL_GPIO_TogglePin(PIN_1_GPIO_Port, PIN_1_Pin);
+			  	}
+			  	else if(num == 2){
+			  		HAL_GPIO_TogglePin(PIN_2_GPIO_Port, PIN_2_Pin);
+			  	}
+			  	else if(num == 3){
+			  		HAL_GPIO_TogglePin(PIN_3_GPIO_Port, PIN_3_Pin);
+			  	}
+			  	else if(num == 4){
+			  		HAL_GPIO_TogglePin(PIN_4_GPIO_Port, PIN_4_Pin);
+			  	}
+			  	else if(num == 5){
+			  		HAL_GPIO_TogglePin(PIN_5_GPIO_Port, PIN_5_Pin);
+			  	}
+			  	else if(num == 6){
+			  		HAL_GPIO_TogglePin(PIN_6_GPIO_Port, PIN_6_Pin);
+			  	}
+			  	else if(num == 7){
+			  		HAL_GPIO_TogglePin(PIN_7_GPIO_Port, PIN_7_Pin);
+			  	}
+			  	else if(num == 8){
+			  		HAL_GPIO_TogglePin(PIN_8_GPIO_Port, PIN_8_Pin);
+			  	}
+			  	else if(num == 9){
+			  		HAL_GPIO_TogglePin(PIN_9_GPIO_Port, PIN_9_Pin);
+			  	}
+			  	else if(num == 10){
+			  		HAL_GPIO_TogglePin(PIN_10_GPIO_Port, PIN_10_Pin);
+			  	}
+			  	else if(num == 11){
+			  		HAL_GPIO_TogglePin(PIN_11_GPIO_Port, PIN_11_Pin);
+			  	}
+			  	else if(num == 0){
+			  		HAL_GPIO_TogglePin(PIN_12_GPIO_Port, PIN_12_Pin);
+			  	}
+		  		num++;
+		  		if(num == 12) num = 0;
+		  		counter = 50;
+		  	}
+		  	counter--;
+		  	HAL_Delay(10);
 #elif EXERCISE == 7
 
 #elif EXERCISE == 8
@@ -587,7 +643,27 @@ HAL_Delay(10);
 #elif EXERCISE == 9
 
 #elif EXERCISE == 10
-
+		  	if(counter <= 0){
+		  			  		  second++;
+		  				  	  if(second > 59){
+		  				  		  minute++;
+		  					  	  if(minute > 59){
+		  					  		  hour++;
+		  						  	  if(hour > 11){
+		  						  		  hour = 0;
+		  						  	  }
+		  					  		  minute = 0;
+		  					  	  }
+		  				  		  second = 0;
+		  				  	  }
+		  				  		  clearAllClock();
+		  				  		  setNumberOnClock(second/5);
+		  				  	  	  setNumberOnClock(minute/5);
+		  				  	  	  setNumberOnClock(hour);
+		  				  	  	  counter = 100;
+		  			  	  }
+		  	counter--;
+		  	HAL_Delay(10);
 #endif
     /* USER CODE END WHILE */
 
@@ -781,7 +857,27 @@ static void MX_GPIO_Init(void)
 #elif EXERCISE == 9
 
 #elif EXERCISE == 10
+      GPIO_InitTypeDef GPIO_InitStruct = {0};
+          /* USER CODE BEGIN MX_GPIO_Init_1 */
+          /* USER CODE END MX_GPIO_Init_1 */
 
+            /* GPIO Ports Clock Enable */
+
+            /*Configure GPIO pin Output Level */
+            HAL_GPIO_WritePin(GPIOA, PIN_1_Pin|PIN_2_Pin|PIN_3_Pin|PIN_4_Pin
+                                    |PIN_5_Pin|PIN_6_Pin|PIN_7_Pin|PIN_8_Pin
+                                    |PIN_9_Pin|PIN_10_Pin|PIN_11_Pin|PIN_12_Pin, GPIO_PIN_RESET);
+
+            /*Configure GPIO pins : PIN_1_Pin PIN_2_Pin PIN_3_Pin PIN_4_Pin
+                                     PIN_5_Pin PIN_6_Pin PIN_7_Pin PIN_8_Pin
+                                     PIN_9_Pin PIN_10_Pin PIN_11_Pin PIN_12_Pin */
+            GPIO_InitStruct.Pin = PIN_1_Pin|PIN_2_Pin|PIN_3_Pin|PIN_4_Pin
+                                    |PIN_5_Pin|PIN_6_Pin|PIN_7_Pin|PIN_8_Pin
+                                    |PIN_9_Pin|PIN_10_Pin|PIN_11_Pin|PIN_12_Pin;
+            GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+            GPIO_InitStruct.Pull = GPIO_NOPULL;
+            GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+            HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 #endif
 
 /* USER CODE END MX_GPIO_Init_2 */

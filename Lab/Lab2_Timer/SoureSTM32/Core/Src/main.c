@@ -36,7 +36,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-#define EXERCISE 3
+#define EXERCISE 7
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -149,10 +149,10 @@ int main(void)
 #elif EXERCISE == 6
   setTimer(100, 0);
 #elif EXERCISE == 7
-  setTimer(100, 0); //RED_LED
-  setTimer(7, 1); //CLOCK HOUR_MINUTE_SECOND
-  setTimer(25, 2); //DISLAY 7 - SEG LED
-  setTimer(50, 3);
+  setTimer(0, 100); //RED_LED
+  setTimer(1, 7); //CLOCK HOUR_MINUTE_SECOND
+  setTimer(2, 25); //DISLAY 7 - SEG LED
+  setTimer(3, 50);
 #elif EXERCISE == 8
 
 #elif EXERCISE == 9
@@ -193,14 +193,14 @@ int main(void)
 #elif EXERCISE == 7
 	  if(istimer_flag(0) == 1){
 		   HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-		   setTimer(200, 0);
+		   setTimer(0, 200);
 	  }
 	  if(istimer_flag(1) == 1){
-		  second++;
-		  if (second >= 60){
-			  second = 0;
+//		  second++;
+//		  if (second >= 60){
+//			  second = 0;
 			  minute++;
-		  }
+//		  }
 		  if(minute >= 60){
 			  minute = 0;
 			  hour++;
@@ -209,16 +209,16 @@ int main(void)
 			  hour = 0;
 		  }
 		  updateClockBuffer();
-		  setTimer(100, 1);
+		  setTimer(1, 100);
 	  }
 	  if(istimer_flag(2) == 1){
 		  update7SEG(index_led++);
 		  if(index_led > 3) index_led = 0;
-		  setTimer(25, 2);
+		  setTimer(2, 25);
 	  }
 	  if(istimer_flag(3) == 1){
 		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-		  setTimer(100, 3);
+		  setTimer(3, 100);
 	  }
 #elif EXERCISE == 8
 

@@ -8,7 +8,7 @@
 //==============================================================================
 #define MAX_SOFTWARE_TIMER 10
 #define TIMER_CYCLE 1 // Timer interrupt period is 10ms
-#define USING_DATA_STRUCTURE_FOR_SOFTWARE_TIMER 2
+#define USING_DATA_STRUCTURE_FOR_SOFTWARE_TIMER 3
 #define USING_FUNCTION_DISLAY7SEG 1
 void setTimer(int duration, int index);
 int istimer_flag(int index);

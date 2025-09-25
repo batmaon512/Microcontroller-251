@@ -4,7 +4,6 @@
 //==============================================================================
 #if USING_DATA_STRUCTURE_FOR_SOFTWARE_TIMER == 1
 //IMPLEMENT DATA STRUCTURE FOR SOFTWARE TIMER
-#define MAX_SOFTWARE_TIMER 20
 typedef struct Node {
     int counter;
 	int timer_idex;
@@ -76,9 +75,9 @@ typedef struct {
     int flag;
 } SoftwareTimer;
 
-SoftwareTimer software_timers[MAX_SOFTWARE_TIMER];
+SoftwareTimer software_timers[MAX_SOFTWARE_TIMER] = {0};
 
-void setTimer(int duration, int index){
+void setTimer(int index, int duration){
     if(index >= MAX_SOFTWARE_TIMER) return;
     software_timers[index].counter = duration / TIMER_CYCLE;
     software_timers[index].flag = 0;
@@ -92,6 +91,75 @@ void timer_run(){
                 software_timers[i].flag = 1;
             }
         }
+    }
+}
+
+int istimer_flag(int timer_index){
+    if(timer_index >= MAX_SOFTWARE_TIMER) return 0;
+    if(software_timers[timer_index].flag == 1) {
+        software_timers[timer_index].flag = 0;
+        return 1;
+    }
+    return 0;
+}
+#elif USING_DATA_STRUCTURE_FOR_SOFTWARE_TIMER == 3
+typedef struct {
+    int counter;
+    uint8_t flag;
+    int next_index;
+} SoftwareTimer;
+SoftwareTimer software_timers[MAX_SOFTWARE_TIMER] = {0};
+int head_timer = -1;
+void setTimer(int index, int duration){
+	int count = duration/TIMER_CYCLE;
+    if(index >= MAX_SOFTWARE_TIMER) return;
+    software_timers[index].flag = 0;
+    if(head_timer == -1){
+    	head_timer = index;
+    	software_timers[index].counter = count;
+    	software_timers[index].next_index = -1;
+    	return;
+    }
+    else{
+    	if(software_timers[head_timer].counter > count){
+    		software_timers[head_timer].counter -= count;
+    		software_timers[index].next_index = head_timer;
+    		head_timer = index;
+    		software_timers[index].counter = count;
+    		return;
+    	}
+    	else{
+    		count -= software_timers[head_timer].counter;
+    		int pre = head_timer;
+    		int temp = software_timers[head_timer].next_index;
+    		while(temp != -1){
+    			if(count >= software_timers[temp].counter){
+    			count -= software_timers[temp].counter;
+    			pre = temp;
+    			temp = software_timers[temp].next_index;
+    			}
+    			else{
+    				software_timers[temp].counter -= count;
+    				software_timers[index].next_index = temp;
+    				software_timers[pre].next_index = index;
+    				software_timers[index].counter = count;
+    				return;
+    			}
+    		}
+    		software_timers[pre].next_index = index;
+    		software_timers[index].next_index = -1;
+    		software_timers[index].counter = count;
+    	return;
+    	}
+    }
+}
+
+void timer_run(){
+    if(head_timer == -1) return;
+    software_timers[head_timer].counter--;
+    while(software_timers[head_timer].counter <= 0){
+    	software_timers[head_timer].flag = 1;
+    	head_timer = software_timers[head_timer].next_index;
     }
 }
 
@@ -123,7 +191,7 @@ const uint8_t seg_code[10] = {
 };
 void display7SEG(int num){
 	 if(num > 9 || num < 0) return;
-	 HAL_GPIO_WritePin(SEG0_GPIO_Port, 0b11111111, 0);
+	 HAL_GPIO_WritePin(SEG0_GPIO_Port, ~seg_code[num], 0);
 	 HAL_GPIO_WritePin(SEG0_GPIO_Port, seg_code[num], 1);
 
 }
