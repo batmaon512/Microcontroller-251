@@ -36,7 +36,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-#define EXERCISE 7
+#define EXERCISE 10
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -70,8 +70,8 @@ static void MX_TIM2_Init(void);
 #define TIME_SWITCH 25
 //(x10 ms)
 int counter = TIME_SWITCH;
-int time_2led = 100;
-int hour = 15, minute = 8, second = 50;
+int time_2led = 25;
+int hour = 15, minute = 59, second = 50;
 
 void updateClockBuffer(){
 if(hour > 99 || hour < 0 || minute > 99 || minute < 0) return;
@@ -147,18 +147,21 @@ int main(void)
 #elif EXERCISE == 5
 
 #elif EXERCISE == 6
-  setTimer(100, 0);
+  setTimer(0, 1000);
 #elif EXERCISE == 7
-  setTimer(0, 100); //RED_LED
+  setTimer(0, 1000); //RED_LED
   setTimer(1, 7); //CLOCK HOUR_MINUTE_SECOND
-  setTimer(2, 25); //DISLAY 7 - SEG LED
-  setTimer(3, 50);
+  setTimer(2, 250); //DISLAY 7 - SEG LED
+  setTimer(3, 500);
 #elif EXERCISE == 8
 
 #elif EXERCISE == 9
-  setTimer(25, 0);
+  uint8_t matrix_buffer[8] = { 0x00, 0xFC, 0x0A, 0x09, 0x09, 0x0A, 0xFC, 0x00};
+  setTimer(0, 10);
 #elif EXERCISE == 10
-
+  uint8_t matrix_buffer[8] = { 0x00, 0xFC, 0x0A, 0x09, 0x09, 0x0A, 0xFC, 0x00};
+  int k = 0;
+  setTimer(0, 100);
 #endif
   while (1)
   {
@@ -188,12 +191,12 @@ int main(void)
 #elif EXERCISE == 6
 	  if(istimer_flag(0) == 1){
 	   HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-	   setTimer(200, 0);
+	   setTimer(0,2000);
 	   }
 #elif EXERCISE == 7
 	  if(istimer_flag(0) == 1){
 		   HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-		   setTimer(0, 200);
+		   setTimer(0, 2000);
 	  }
 	  if(istimer_flag(1) == 1){
 //		  second++;
@@ -209,27 +212,33 @@ int main(void)
 			  hour = 0;
 		  }
 		  updateClockBuffer();
-		  setTimer(1, 100);
+		  setTimer(1, 1000);
 	  }
 	  if(istimer_flag(2) == 1){
 		  update7SEG(index_led++);
 		  if(index_led > 3) index_led = 0;
-		  setTimer(2, 25);
+		  setTimer(2, 250);
 	  }
 	  if(istimer_flag(3) == 1){
 		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-		  setTimer(3, 100);
+		  setTimer(3, 1000);
 	  }
 #elif EXERCISE == 8
 
 #elif EXERCISE == 9
 	  if(istimer_flag(0) == 1){
-		  updateLEDMatrix(index_led_matrix++);
+		  updateLEDMatrix(index_led_matrix, matrix_buffer[index_led_matrix]);
+		  index_led_matrix++;
 		  if(index_led_matrix > 7) index_led_matrix = 0;
-		  setTimer(1, 0);
+		  setTimer(0, 10);
 	  }
 #elif EXERCISE == 10
-
+	  if(istimer_flag(0) == 1){
+		  updateLEDMatrix(index_led_matrix, matrix_buffer[(index_led_matrix+k)%8]);
+		  index_led_matrix--;
+		  if(index_led_matrix < 0) {index_led_matrix = 7; k++;}
+		  setTimer(0, 10);
+	  }
 #endif
     /* USER CODE END WHILE */
 
@@ -293,7 +302,7 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 7999;
+  htim2.Init.Prescaler = 799;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 9;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -560,7 +569,7 @@ timer_run();
 #elif EXERCISE == 10
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-
+timer_run();
 }
 #endif
 /* USER CODE END 4 */

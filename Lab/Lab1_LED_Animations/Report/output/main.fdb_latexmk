@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1758811759.70326 "c:/Users/chith/Downloads/Study/HK251/VXL_VDK/Microcontroller-251/Lab/Lab1_LED_Animations/Report/main.tex" "output/main.pdf" "main" 1758811764.44418 0
-  "c:/Users/chith/Downloads/Study/HK251/VXL_VDK/Microcontroller-251/Lab/Lab1_LED_Animations/Report/main.tex" 1758811754 24056 07dacb509232710f1dbe117d536caea4 ""
+["pdflatex"] 1758812113.86198 "c:/Users/chith/Downloads/Study/HK251/VXL_VDK/Microcontroller-251/Lab/Lab1_LED_Animations/Report/main.tex" "output/main.pdf" "main" 1758812118.62865 0
+  "c:/Users/chith/Downloads/Study/HK251/VXL_VDK/Microcontroller-251/Lab/Lab1_LED_Animations/Report/main.tex" 1758812107 24066 4c2a9e0eec883d6e1ebd6c641aee4059 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1754103782 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/vntex/t5.enc" 1754134919 7824 21ade6c3c7fd67cb4ace8dbc91c53118 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1754106845 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -205,10 +205,10 @@
   "graphics/f8.png" 1758809633 111783 03e3af7c231b6388b0a5fe7a859154c8 ""
   "graphics/hcmut.png" 1726658106 100724 34813e7945d25073d2021fd11a318249 ""
   "hcmut_report.cls" 1758728833 6755 94336dbb2a635dbe4f970c82bcbaede8 ""
-  "main.tex" 1758811754 24056 07dacb509232710f1dbe117d536caea4 ""
-  "output/main.aux" 1758811764 6876 2a360f454445f10c38257934a3f35b9b "pdflatex"
-  "output/main.out" 1758811764 1300 dd37a41ea2f244b67aabc0bae7d31612 "pdflatex"
-  "output/main.toc" 1758811764 935 8405dceed867c26797cb48b7ec8b2846 "pdflatex"
+  "main.tex" 1758812107 24066 4c2a9e0eec883d6e1ebd6c641aee4059 ""
+  "output/main.aux" 1758812118 6876 88994afd5283df318ee4886e72cfb77e "pdflatex"
+  "output/main.out" 1758812118 1300 dd37a41ea2f244b67aabc0bae7d31612 "pdflatex"
+  "output/main.toc" 1758812118 935 e61083d05747436d605276444907685d "pdflatex"
   (generated)
   "output/main.aux"
   "output/main.log"

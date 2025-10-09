@@ -1,6 +1,6 @@
-../Core/Src/timer_driver.c:113:6:setTimer	6
-../Core/Src/timer_driver.c:157:6:timer_run	3
-../Core/Src/timer_driver.c:166:5:istimer_flag	3
-../Core/Src/timer_driver.c:192:6:display7SEG	3
-../Core/Src/timer_driver.c:215:6:update7SEG	5
-../Core/Src/timer_driver.c:260:7:updateLEDMatrix	9
+../Core/Src/timer_driver.c:81:6:setTimer	2
+../Core/Src/timer_driver.c:87:6:timer_run	4
+../Core/Src/timer_driver.c:98:5:istimer_flag	3
+../Core/Src/timer_driver.c:193:6:display7SEG	3
+../Core/Src/timer_driver.c:216:6:update7SEG	3
+../Core/Src/timer_driver.c:231:7:updateLEDMatrix	3
