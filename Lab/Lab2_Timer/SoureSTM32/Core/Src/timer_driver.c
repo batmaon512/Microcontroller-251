@@ -225,19 +225,19 @@ void update7SEG(int index){
 // 8x8 LED Matrix Driver 0xFC = 0x11111100
 //==============================================================================
  const int MAX_LED_MATRIX = 8;
+ uint8_t matrix_buffer[8] = { 0x00, 0xFC, 0x0A, 0x09, 0x09, 0x0A, 0xFC, 0x00};
  int index_led_matrix = 0;
 //USING THIS CODE IF ONLY THIS LAB BECAUSE THEIR ARE SAME PORT
 uint16_t Pin_LED_Maxtrix[8] = {ENM0_Pin,ENM1_Pin,ENM2_Pin,ENM3_Pin,ENM4_Pin,ENM5_Pin,ENM6_Pin,ENM7_Pin};
- void updateLEDMatrix(int index, uint8_t buffer){
+ void updateLEDMatrix(int index){
 	if(index >= MAX_LED_MATRIX || index < 0) return;
 	HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin | ENM1_Pin | ENM2_Pin | ENM3_Pin | ENM4_Pin | ENM5_Pin | ENM6_Pin | ENM7_Pin, SET);
-	HAL_GPIO_WritePin(ENM0_GPIO_Port, Pin_LED_Maxtrix[index], RESET);
-
-	uint16_t matrix_pin_for_buffer0 = buffer;
-	uint16_t matrix_pin_for_buffer1 = ~buffer;
+	uint16_t matrix_pin_for_buffer0 = matrix_buffer[index];
+	uint16_t matrix_pin_for_buffer1 = ~matrix_buffer[index];
 	matrix_pin_for_buffer0 = matrix_pin_for_buffer0<<8;
 	matrix_pin_for_buffer1 = matrix_pin_for_buffer1<<8;
 	HAL_GPIO_WritePin(ROW0_GPIO_Port, matrix_pin_for_buffer0, 0);
 	HAL_GPIO_WritePin(ROW0_GPIO_Port, matrix_pin_for_buffer1, 1);
+	HAL_GPIO_WritePin(ENM0_GPIO_Port, Pin_LED_Maxtrix[index], RESET);
 
   }

@@ -3,4 +3,4 @@
 ../Core/Src/timer_driver.c:98:5:istimer_flag	16	static
 ../Core/Src/timer_driver.c:193:6:display7SEG	16	static
 ../Core/Src/timer_driver.c:216:6:update7SEG	16	static
-../Core/Src/timer_driver.c:231:7:updateLEDMatrix	24	static
+../Core/Src/timer_driver.c:232:7:updateLEDMatrix	24	static

@@ -156,11 +156,8 @@ int main(void)
 #elif EXERCISE == 8
 
 #elif EXERCISE == 9
-  uint8_t matrix_buffer[8] = { 0x00, 0xFC, 0x0A, 0x09, 0x09, 0x0A, 0xFC, 0x00};
   setTimer(0, 10);
 #elif EXERCISE == 10
-  uint8_t matrix_buffer[8] = { 0x00, 0xFC, 0x0A, 0x09, 0x09, 0x0A, 0xFC, 0x00};
-  int k = 0;
   setTimer(0, 100);
 #endif
   while (1)
@@ -199,11 +196,11 @@ int main(void)
 		   setTimer(0, 2000);
 	  }
 	  if(istimer_flag(1) == 1){
-//		  second++;
-//		  if (second >= 60){
-//			  second = 0;
+		  second++;
+		  if (second >= 60){
+			  second = 0;
 			  minute++;
-//		  }
+		  }
 		  if(minute >= 60){
 			  minute = 0;
 			  hour++;
@@ -234,9 +231,9 @@ int main(void)
 	  }
 #elif EXERCISE == 10
 	  if(istimer_flag(0) == 1){
-		  updateLEDMatrix(index_led_matrix, matrix_buffer[(index_led_matrix+k)%8]);
-		  index_led_matrix--;
-		  if(index_led_matrix < 0) {index_led_matrix = 7; k++;}
+		  matrix_buffer[index_led_matrix] = matrix_buffer[index_led_matrix]<<1|matrix_buffer[index_led_matrix]>>7;
+		  updateLEDMatrix(index_led_matrix--);
+		  if(index_led_matrix < 0) {index_led_matrix = 7;}
 		  setTimer(0, 10);
 	  }
 #endif
@@ -302,7 +299,7 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 799;
+  htim2.Init.Prescaler = 7999;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 9;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
