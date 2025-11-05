@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1760006376.04856 "c:/Users/chith/Downloads/Study/HK251/VXL_VDK/Microcontroller-251/Lab/Lab2_Timer/Report/main.tex" "output/main.pdf" "main" 1760006380.30626 0
-  "c:/Users/chith/Downloads/Study/HK251/VXL_VDK/Microcontroller-251/Lab/Lab2_Timer/Report/main.tex" 1760006370 20772 485d1b3201fa76f3c3c4334d48559f2b ""
+["pdflatex"] 1760006719.88115 "c:/Users/chith/Downloads/Study/HK251/VXL_VDK/Microcontroller-251/Lab/Lab2_Timer/Report/main.tex" "output/main.pdf" "main" 1760006723.79883 0
+  "c:/Users/chith/Downloads/Study/HK251/VXL_VDK/Microcontroller-251/Lab/Lab2_Timer/Report/main.tex" 1760006718 20777 92443cb4b67dfb978d73e2d1543cd503 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1754103782 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/vntex/t5.enc" 1754134919 7824 21ade6c3c7fd67cb4ace8dbc91c53118 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1754106845 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -201,10 +201,10 @@
   "graphics/lab2_ex2a.PNG" 1758723282 123182 ed2f438143e53d525879f4c7a12a7ead ""
   "graphics/lab2_m4.PNG" 1758723282 206456 6501bbc8d34726c1d9122e0dc30d08b9 ""
   "hcmut_report.cls" 1758728833 6755 94336dbb2a635dbe4f970c82bcbaede8 ""
-  "main.tex" 1760006370 20772 485d1b3201fa76f3c3c4334d48559f2b ""
-  "output/main.aux" 1760006379 5467 521ae06d0494c744aebf8f03a5ce1ea8 "pdflatex"
-  "output/main.out" 1760006379 1356 75992b4f75ca927fd541948a1a353e12 "pdflatex"
-  "output/main.toc" 1760006379 947 43d5f728a0c65f667fbc701090207a10 "pdflatex"
+  "main.tex" 1760006718 20777 92443cb4b67dfb978d73e2d1543cd503 ""
+  "output/main.aux" 1760006723 5467 521ae06d0494c744aebf8f03a5ce1ea8 "pdflatex"
+  "output/main.out" 1760006723 1356 75992b4f75ca927fd541948a1a353e12 "pdflatex"
+  "output/main.toc" 1760006723 947 43d5f728a0c65f667fbc701090207a10 "pdflatex"
   (generated)
   "output/main.aux"
   "output/main.log"
