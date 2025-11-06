@@ -54,7 +54,9 @@ void fsm_button(void){
 		            break;
 		        case BUTTON_PRESSED:
 		            if (!is_button_pressed(i)) buttonState[i] = BUTTON_RELEASED;
-		            else if (is_button_long_pressed(i)) buttonState[i] = BUTTON_LONG_PRESSED;
+		            else if (is_button_long_pressed(i)){
+		            	flagTransitionLongPress[i] = 1;
+		            	buttonState[i] = BUTTON_LONG_PRESSED;}
 		            break;
 		        case BUTTON_LONG_PRESSED:
 		            if (!is_button_pressed(i)) buttonState[i] = BUTTON_RELEASED;

@@ -51,7 +51,7 @@ extern GPIO_PinState debounceButtonBuffer[MAX_BUTTONS];
 extern uint16_t counterButtonBuffer[MAX_BUTTONS];
 extern uint8_t flagButtonLongPress[MAX_BUTTONS];
 extern uint16_t counterButtonLongPress[MAX_BUTTONS];
-
+extern uint8_t flagTransitionLongPress[MAX_BUTTONS];
 //==============================================================================
 // Display
 //==============================================================================

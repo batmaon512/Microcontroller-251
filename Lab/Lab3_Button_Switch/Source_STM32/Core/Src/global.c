@@ -22,6 +22,7 @@ uint8_t flagButtonLongPress[MAX_BUTTONS] = {0};
 uint16_t counterButtonLongPress[MAX_BUTTONS] = {0};
 uint8_t flagPress[MAX_BUTTONS] = {0};
 uint8_t flagLongPress[MAX_BUTTONS] = {0};
+uint8_t flagTransitionLongPress[MAX_BUTTONS] = {0};
 enum ButtonState buttonState[MAX_BUTTONS];
 //==============================================================================
 // Display

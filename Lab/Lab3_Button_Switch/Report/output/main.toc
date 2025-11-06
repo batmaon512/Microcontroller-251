@@ -1,0 +1,13 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
+\contentsline {section}{\numberline {2}Exercise and Report}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Exercise 1: Sketch an FSM}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Exercise 2: Proteus Schematic}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Exercise 3: Create STM32 Project}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Exercise 4: Modify Timer Parameters}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Exercise 5: Adding code for button debouncing}{10}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Exercise 6: Adding code for displaying modes}{13}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Exercise 7: Adding code for increasing time duration value for the red LEDs}{16}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Exercise 8: Adding code for increasing time duration value for the amber LEDs}{17}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Exercise 9: Adding code for increasing time duration value for the green LEDs}{18}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Exercise 10: To finish the project}{19}{subsection.2.10}%
