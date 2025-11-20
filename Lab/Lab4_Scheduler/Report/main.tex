@@ -967,6 +967,38 @@ void SCH_Go_To_Sleep(){
 
 Function \textbf{SCH\_Go\_To\_Sleep} puts the MCU into sleep mode to reduce power consumption when there are no tasks to execute and will acivate again when an interrupt occurs.
 
+\subsection{in while(1) loop in main.c}
+\begin{lstlisting}[basicstyle=\small, caption=An implementation of the ‘watchdog’ functions]
+init_running();
+SCH_Intit();
+SCH_Add_Task(button_reading, 10, TIME_BUTTON_SCAN);
+SCH_Add_Task(timer_run, 20, TIMER_CYCLE);
+SCH_Add_Task(ModeDisplay, 30, TIME_SCAN);
+SCH_Add_Task(Display4LED, 50, 50);
+int IDPA5 = SCH_Add_Task(DisplayLEDPA5, 70, 500);
+setTimer(0, 5000);
+setTimer(1, 10000);
+  while (1)
+  {
+	  if(istimer_flag(0) == 1){
+		  SCH_Delete_Task(IDPA5);
+	  }
+	  if(istimer_flag(1) == 1){
+		  SCH_Add_Task(DisplayLEDPA5, 10, 500);
+	  }
+	  SCH_Dispatch_Tasks();
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+  }
+  /* USER CODE END 3 */
+}
+\end{lstlisting}
+
+Add all task of lab 3 to the scheduler. In the while(1) loop, call \textbf{SCH\_Dispatch\_Tasks} to execute the tasks.
+
+Test code for delete and add task in the while(1) loop.
+
 \section{Demonstration}
 
 You should be able to show some test code that uses all the functions specified in the driver interface.

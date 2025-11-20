@@ -28,5 +28,6 @@
 \contentsline {subsection}{\numberline {5.5}SCH\_Dispatch\_Tasks}{27}{subsection.5.5}%
 \contentsline {subsection}{\numberline {5.6}SCH\_Delete\_Task}{28}{subsection.5.6}%
 \contentsline {subsection}{\numberline {5.7}SCH\_Go\_To\_Sleep}{29}{subsection.5.7}%
-\contentsline {section}{\numberline {6}Demonstration}{29}{section.6}%
+\contentsline {subsection}{\numberline {5.8}in while(1) loop in main.c}{29}{subsection.5.8}%
+\contentsline {section}{\numberline {6}Demonstration}{30}{section.6}%
 \contentsline {section}{\numberline {7}Submission}{30}{section.7}%

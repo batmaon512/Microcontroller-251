@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.2)  20 NOV 2025 21:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.2)  20 NOV 2025 21:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -995,7 +995,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<graphics/hcmut.png, id=131, 291.0072pt x 293.898pt>
+<graphics/hcmut.png, id=135, 291.0072pt x 293.898pt>
 File: graphics/hcmut.png Graphic file (type png)
 <use graphics/hcmut.png>
 Package pdftex.def Info: graphics/hcmut.png  used on input line 21.
@@ -1041,13 +1041,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 [2
 
 
-] (output/main.toc)
+] (output/main.toc
+
+[3])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 
-
-[3]
 
 [4]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 30.
@@ -1126,7 +1126,9 @@ Overfull \hbox (10.05916pt too wide) in paragraph at lines 299--301
 
 [29]
 
-[30] (output/main.aux)
+[30]
+
+[31] (output/main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-20>
@@ -1136,21 +1138,21 @@ L3 programming layer <2025-07-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B8974EE827A132A70866A88CF0D87992;5155.
+(rerunfilecheck)             Checksum: 2BD3D076C1B59284751EDC57A2E00525;5361.
  ) 
 Here is how much of TeX's memory you used:
- 30892 strings out of 467801
- 570787 string characters out of 5436090
+ 30940 strings out of 467801
+ 571504 string characters out of 5436090
  1231763 words of memory out of 5000000
- 58524 multiletter control sequences out of 15000+600000
+ 58545 multiletter control sequences out of 15000+600000
  673005 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,12n,121p,588b,2017s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/vntex/urwvn/utmb8v.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/urwvn/utmr8v.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/urwvn/utmri8v.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vntt10.pfb>
-Output written on output/main.pdf (30 pages, 193726 bytes).
+Output written on output/main.pdf (31 pages, 195857 bytes).
 PDF statistics:
- 895 PDF objects out of 1000 (max. 8388607)
- 842 compressed objects within 9 object streams
- 520 named destinations out of 1000 (max. 500000)
- 266 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 936 PDF objects out of 1000 (max. 8388607)
+ 882 compressed objects within 9 object streams
+ 547 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
 
