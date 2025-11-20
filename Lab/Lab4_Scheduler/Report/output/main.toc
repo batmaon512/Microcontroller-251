@@ -1,0 +1,32 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {section}{\numberline {1}Overview}{5}{section.1}%
+\contentsline {section}{\numberline {2}Introduction}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Super Loop Architecture}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Timer-based interrupts and interrupt service routines}{7}{subsection.2.2}%
+\contentsline {section}{\numberline {3}What is a scheduler?}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The co-operative scheduler}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Function pointers}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Solution}{10}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Overview}{11}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}The scheduler data structure and task array}{12}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}The initialization function}{13}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}The ‘Update’ function}{14}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}The ‘Add Task’ function}{15}{subsubsection.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.6}The ‘Dispatcher’}{16}{subsubsection.3.3.6}%
+\contentsline {subsubsection}{\numberline {3.3.7}The ‘Delete Task’ function}{18}{subsubsection.3.3.7}%
+\contentsline {subsubsection}{\numberline {3.3.8}Reducing power consumption}{18}{subsubsection.3.3.8}%
+\contentsline {subsubsection}{\numberline {3.3.9}Reporting errors}{19}{subsubsection.3.3.9}%
+\contentsline {subsubsection}{\numberline {3.3.10}Adding a watchdog}{21}{subsubsection.3.3.10}%
+\contentsline {subsubsection}{\numberline {3.3.11}Reliability and safety implications}{22}{subsubsection.3.3.11}%
+\contentsline {subsubsection}{\numberline {3.3.12}Portability}{22}{subsubsection.3.3.12}%
+\contentsline {section}{\numberline {4}Objectives}{22}{section.4}%
+\contentsline {section}{\numberline {5}Problem}{23}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Define and initialize the variables and data structures for the scheduler}{23}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}SCH\_Intit}{24}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}SCH\_Add\_Task}{24}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}SCH\_Update}{26}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}SCH\_Dispatch\_Tasks}{27}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}SCH\_Delete\_Task}{28}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}SCH\_Go\_To\_Sleep}{29}{subsection.5.7}%
+\contentsline {section}{\numberline {6}Demonstration}{29}{section.6}%
+\contentsline {section}{\numberline {7}Submission}{30}{section.7}%

@@ -1,0 +1,8 @@
+../Core/Src/button.c:21:6:init_button	16	static
+../Core/Src/button.c:28:6:button_reading	16	static
+../Core/Src/button.c:59:15:is_button_pressed	16	static
+../Core/Src/button.c:64:15:is_button_long_pressed	16	static
+../Core/Src/button.c:68:15:event_button	16	static
+../Core/Src/button.c:74:15:event_button_long	16	static
+../Core/Src/button.c:80:6:clear_event_button	16	static
+../Core/Src/button.c:85:6:clear_event_button_long	16	static
