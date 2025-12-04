@@ -1,0 +1,15 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {section}{\numberline {1}Overview}{4}{section.1}%
+\contentsline {section}{\numberline {2}Introduction}{4}{section.2}%
+\contentsline {section}{\numberline {3}Proteus simulation platform}{6}{section.3}%
+\contentsline {section}{\numberline {4}Project configurations}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}UART Configuration}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}ADC Input}{7}{subsection.4.2}%
+\contentsline {section}{\numberline {5}UART loop-back communication}{9}{section.5}%
+\contentsline {section}{\numberline {6}Sensor reading}{10}{section.6}%
+\contentsline {section}{\numberline {7}Project description}{10}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Command parser}{11}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Project implementation}{13}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Command parser FSM}{13}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}UART communication FSM}{14}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}While loop and UART}{15}{subsubsection.7.2.3}%

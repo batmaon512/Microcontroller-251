@@ -1,9 +1,9 @@
 ../Core/Src/scheduler.c:15:7:create_node	24	static
 ../Core/Src/scheduler.c:22:6:insert	24	static
 ../Core/Src/scheduler.c:45:6:SCH_Intit	16	static
-../Core/Src/scheduler.c:58:6:SCH_Update	24	static
-../Core/Src/scheduler.c:81:6:SCH_Dispatch_Tasks	24	static
-../Core/Src/scheduler.c:114:10:SCH_Add_Task	40	static
-../Core/Src/scheduler.c:130:9:SCH_Delete_Task	24	static
-../Core/Src/scheduler.c:159:6:SCH_Go_To_Sleep	8	static
-../Core/Src/scheduler.c:163:6:SCH_Report_Status	4	static
+../Core/Src/scheduler.c:57:6:SCH_Update	24	static
+../Core/Src/scheduler.c:80:6:SCH_Dispatch_Tasks	24	static
+../Core/Src/scheduler.c:113:10:SCH_Add_Task	40	static
+../Core/Src/scheduler.c:129:9:SCH_Delete_Task	24	static
+../Core/Src/scheduler.c:158:6:SCH_Go_To_Sleep	8	static
+../Core/Src/scheduler.c:162:6:SCH_Report_Status	4	static
